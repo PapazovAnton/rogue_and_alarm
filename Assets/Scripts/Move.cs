@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
+
 public class Move : MonoBehaviour
 {
     [SerializeField] private float _speed;
     private Animator _animator;
-    private Sprite _sprite;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
-        _sprite = GetComponent<Sprite>();
     }
 
     private void Update()

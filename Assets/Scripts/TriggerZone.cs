@@ -12,7 +12,6 @@ public class TriggerZone : MonoBehaviour
     {
         if(collision.TryGetComponent<Dude>(out Dude dude))
         {
-            Debug.Log("Вошел");
             _enter?.Invoke();
         }
     }
@@ -22,7 +21,6 @@ public class TriggerZone : MonoBehaviour
         if (collision.TryGetComponent<Dude>(out Dude dude))
         {
             _exit?.Invoke();
-            Debug.Log("Вышел");
         }
     }
 }
